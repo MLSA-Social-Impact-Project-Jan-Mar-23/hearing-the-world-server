@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = {extras = ["all"], version = "*"}
+python-dotenv = "*"
+azure-cognitiveservices-vision-computervision = "*"
+pillow = "*"
+openai = "*"
+
+[dev-packages]
+
+[scripts]
+watch = "uvicorn main:app --reload --port 3000"
+start = "python3 main.py"
+
+[requires]
+python_version = "3.10"
