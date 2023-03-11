@@ -9,6 +9,7 @@ python-dotenv = "*"
 azure-cognitiveservices-vision-computervision = "*"
 pillow = "*"
 openai = "*"
+python-multipart = "*"
 
 [dev-packages]
 

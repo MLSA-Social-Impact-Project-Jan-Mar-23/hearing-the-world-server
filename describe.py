@@ -6,7 +6,7 @@ import os
 # General setup
 config = dotenv_values(".env")
 
-def describe(hash):    
+def describe(path):    
 
     # Cognitive Services setup
     endpoint = config["COGNITIVE_SERVICES_IMAGE_PROCESSING_ENDPOINT"]
@@ -15,7 +15,7 @@ def describe(hash):
 
     # Processing local image using the describe_image method
     images_folder = os.path.join (os.path.dirname(os.path.abspath(__file__)), "images")
-    image_stream = open(os.path.join(images_folder,hash+".png"),"rb")
+    image_stream = open(os.path.join(images_folder,path),"rb")
 
     description_results = computervision_client.describe_image_in_stream(image_stream)
 

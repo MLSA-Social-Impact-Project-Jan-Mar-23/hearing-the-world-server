@@ -25,6 +25,10 @@ Run the server
 
      pipenv run start
 
+To exit pipenv
+
+     Ctrl + D
+
 # Documentations
 
 [Azure Cognitive Services SDK for Python](https://learn.microsoft.com/en-us/python/api/overview/azure/cognitiveservices-vision-computervision-readme?view=azure-python)
