@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: hearing_the_world_server
+    image: hearing-the-world-server
+    build:
+      context: .
+      target: ${APP_ENV}
+    ports:
+      - ${SERVER_EXTERNAL_PORT}:8000
+    # Uncomment the below lines only in dev mode  
+    # volumes:
+      # - .:/app
+
+    env_file:
+      - .env

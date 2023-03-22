@@ -5,6 +5,10 @@
 
 # Server setup
 
+
+## **Local**
+</br>
+
 ## Perform the following steps on the command line
 </br>
 
@@ -32,9 +36,42 @@ To run the server in production
 
      pipenv run prod
 
+### **The server should now be running on port 8000**
+
+</br>
+
 To exit pipenv
 
      Ctrl + D
+
+</br>
+
+## **Docker**
+</br>
+
+## Perform the following steps on the command line
+</br>
+
+**Make sure to comment/uncomment the required lines in the docker-compose.yaml file before proceeding**
+
+</br>
+
+Copy environment variables and provide the appropriate values
+
+     cp .env.example .env
+
+Build the image
+
+     docker compose build
+
+Spin the container up
+
+     docker compose up
+
+### **The server should now be running in the port mentioned in the env file**
+
+
+</br>
 
 # Documentations
 

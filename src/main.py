@@ -6,7 +6,6 @@ from src.create_image_file import create_image_file
 
 
 config = dotenv_values(".env")
-port = config["PORT"] or 3000   
 app = FastAPI()
 
 @app.get("/")
@@ -16,8 +15,6 @@ async def root():
 # To generate a story from an image that comes through the POST request
 @app.post("/generate")
 async def send_story(image:UploadFile):
-    # print(name,name.decode('UTF-8').split("=")[1])
-
     # Read the bytes from the image in the request
     image_content:bytes = image.file.read()
 

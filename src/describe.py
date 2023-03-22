@@ -14,7 +14,7 @@ def describe(path):
     computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
     # Processing local image using the describe_image method
-    images_folder = os.path.join (os.path.dirname(os.path.abspath(__file__)), "images")
+    images_folder = os.path.abspath(os.path.join(os.path.dirname(__file__),"..", "images"))
     image_stream = open(os.path.join(images_folder,path),"rb")
 
     description_results = computervision_client.describe_image_in_stream(image_stream)

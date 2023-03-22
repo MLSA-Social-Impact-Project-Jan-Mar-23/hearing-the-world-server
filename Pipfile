@@ -14,8 +14,8 @@ python-multipart = "*"
 [dev-packages]
 
 [scripts]
-dev = "uvicorn src.main:app --reload"
-prod = "uvicorn src.main:app"
+dev = "uvicorn src.main:app --host 0.0.0.0 --reload"
+prod = "uvicorn src.main:app --host 0.0.0.0"
 
 [requires]
 python_version = "3.10"
