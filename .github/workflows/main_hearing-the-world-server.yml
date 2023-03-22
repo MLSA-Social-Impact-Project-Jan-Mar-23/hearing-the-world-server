@@ -24,11 +24,14 @@ jobs:
 
       - name: Create and start virtual environment
         run: |
-          python -m venv venv
-          source venv/bin/activate
+          pip install pipenv
+          pipenv shell
       
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pipenv install
+
+      - name: Run the server
+        run: pipenv run prod
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
@@ -38,7 +41,6 @@ jobs:
           name: python-app
           path: |
             . 
-            !venv/
 
   deploy:
     runs-on: ubuntu-latest
