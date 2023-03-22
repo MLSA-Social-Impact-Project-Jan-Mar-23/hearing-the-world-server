@@ -14,8 +14,8 @@ python-multipart = "*"
 [dev-packages]
 
 [scripts]
-watch = "uvicorn main:app --reload --port 3000"
-start = "python3 main.py"
+dev = "uvicorn src.main:app --reload"
+prod = "uvicorn src.main:app"
 
 [requires]
 python_version = "3.10"

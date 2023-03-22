@@ -5,6 +5,13 @@
 
 # Server setup
 
+## Perform the following steps on the command line
+</br>
+
+Copy environment variables and provide the appropriate values
+
+     cp .env.example .env
+
 Install pipenv
 
      sudo pip3 install pipenv
@@ -17,13 +24,13 @@ Install the necessary packages
      
      pipenv install --dev
 
-Run the server (live reload)
+To run the server in development (live reload)
 
-     pipenv run watch
+     pipenv run dev
 
-Run the server 
+To run the server in production 
 
-     pipenv run start
+     pipenv run prod
 
 To exit pipenv
 
@@ -39,4 +46,4 @@ To exit pipenv
 
 # Flow
 
-## Client sends image ----> Server stores it in local ----> Takes it and processes it with Azure Describe Image ----> Now there is access to the captions and tags for that image 
+## Client sends image ----> Server stores it in the filesystem ----> Takes it and processes it with Azure Describe Image ----> Now there is access to the captions and tags for that image ---> Using those tags and caption design a prompt to provide to OpenAI and generate the story

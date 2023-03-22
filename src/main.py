@@ -1,9 +1,8 @@
 from fastapi import FastAPI,UploadFile
 from dotenv import dotenv_values
-import uvicorn
-from generate_story import generate_story   
-from describe import describe
-from create_image_file import create_image_file
+from src.generate_story import generate_story   
+from src.describe import describe
+from src.create_image_file import create_image_file
 
 
 config = dotenv_values(".env")
@@ -34,6 +33,3 @@ async def send_story(image:UploadFile):
     story_response  = generate_story(tags,caption)
 
     return {"story":story_response.choices[0].text[2:]}
-
-if __name__ == '__main__':
-    uvicorn.run(app, port=port)
