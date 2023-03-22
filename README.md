@@ -73,6 +73,12 @@ Spin the container up
 
 </br>
 
+# How to use the API ?
+
+- Send a **POST** request to **/generate**
+- The body should be a form data with image as the key and the image file as the value
+- Returned data will be an object with key as "story" and the value with the content of the story
+
 # Documentations
 
 [Azure Cognitive Services SDK for Python](https://learn.microsoft.com/en-us/python/api/overview/azure/cognitiveservices-vision-computervision-readme?view=azure-python)
