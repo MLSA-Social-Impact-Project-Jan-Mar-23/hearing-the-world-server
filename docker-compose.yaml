@@ -12,6 +12,5 @@ services:
     # Uncomment the below lines only in dev mode  
     # volumes:
       # - .:/app
-
     env_file:
       - .env
